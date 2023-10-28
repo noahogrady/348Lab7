@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<style>
+            #changingText {
+                width: 170px;
+                height: 100 px;
+                border: 2px solid
+            }
+        </style>
+        <script>
+            function changeText(){
+                changingText = document.getElementById("changingText");
+                changingText.style.color = "rgb(" + document.getElementById('TextR').value + "," + document.getElementById('TextG').value + "," + document.getElementById('TextB').value + ")";
+                changingText.style.borderColor = "rgb(" + document.getElementById('BorderR').value + "," + document.getElementById('BorderG').value + "," + document.getElementById('BorderB').value + ")";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Exercise 2: Changing Text</h1>
+        <div id="changingText">This Text Changes Color</div>
+        <p>Border R Value: <input type = "text" id="BorderR" value = ""></p>
+        <p>Border G Value: <input type = "text" id="BorderG" value = ""></p>
+        <p>Border B Value: <input type = "text" id="BorderB" value = ""></p>
+        <p>Text R Value: <input type = "text" id="TextR" value = ""></p>
+        <p>Text G Value: <input type = "text" id="TextG" value = ""></p>
+        <p>Text B Value: <input type = "text" id="TextB" value = ""></p>
+        <button onclick="changeText()">Change Color!</button>
+    </body>
+</html>

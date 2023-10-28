@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function verify(){
+                firstEntry = document.getElementById('firstEntry')
+                secondEntry = document.getElementById('secondEntry')
+                if (firstEntry.value.length >= 8 && firstEntry.value == secondEntry.value){
+                    alert("Valid Entry")
+                } else if (firstEntry.value.length >= 8) {
+                    alert("Entries do not match")
+                } else if (firstEntry.value == secondEntry.value){
+                    alert("Password is not long enough")
+                } else {
+                    alert("Passwords do not match and are not long enough")
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Exercise 3: Password Verification</h1>
+        <p>Enter Password: <input type="text" id="firstEntry" value=""></p>
+        <p>Enter Password Again: <input type="text" id="secondEntry" value=""></p>
+        <button onclick="verify()">Submit Password</button>
+    </body>
+</html>
